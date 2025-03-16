@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import {
+  faLinkedin,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
   const [showArrow, setShowArrow] = useState(false);
@@ -55,7 +60,6 @@ const Footer = () => {
                 name: "DigitalMarketing",
                 link: "digital-marketing",
               },
-
               {
                 id: "MobileAppDevelopment",
                 name: "MobileDevelopment",
@@ -94,8 +98,8 @@ const Footer = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.2 }}
           >
-            We always strive to provide high-quality guidance for all our
-            clients, helping them grow their businesses successfully.
+            We always strive to provide high-quality guidance for all our clients,
+            helping them grow their businesses successfully.
           </motion.p>
         </div>
 
@@ -118,7 +122,8 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-        {/* contact section  */}
+
+        {/* Contact Section */}
         <div>
           <h2 className="font-bold text-xl mb-4 text-fuchsia-400">
             Contact Us
@@ -133,8 +138,7 @@ const Footer = () => {
               },
               {
                 label: "Address",
-                value:
-                  "Nairobi, Kenya",
+                value: "Nairobi, Kenya",
                 icon: "faMapMarkerAlt",
               },
             ].map((contact, index) => (
@@ -158,6 +162,52 @@ const Footer = () => {
               </motion.li>
             ))}
           </ul>
+
+          {/* Social Media Icons */}
+          <div className="mt-6 flex space-x-4">
+            <motion.a
+              href="https://www.linkedin.com/in/genius-okwemba-897076298/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2 }}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
+            >
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                className="text-fuchsia-400 text-2xl hover:text-fuchsia-600 transition duration-300"
+              />
+            </motion.a>
+            <motion.a
+              href="https://www.instagram.com/your-instagram-profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2 }}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+            >
+              <FontAwesomeIcon
+                icon={faInstagram}
+                className="text-fuchsia-400 text-2xl hover:text-fuchsia-600 transition duration-300"
+              />
+            </motion.a>
+            <motion.a
+              href="https://twitter.com/your-twitter-profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2 }}
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.6 }}
+            >
+              <FontAwesomeIcon
+                icon={faTwitter}
+                className="text-fuchsia-400 text-2xl hover:text-fuchsia-600 transition duration-300"
+              />
+            </motion.a>
+          </div>
         </div>
       </div>
 
@@ -169,8 +219,8 @@ const Footer = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.3, delay: 0.4 }}
         >
-          &copy; {new Date().getFullYear()} Nova Tech Solutions Africa. All
-          rights reserved.
+          &copy; {new Date().getFullYear()} Nova Tech Solutions Africa. All rights
+          reserved.
         </motion.p>
       </div>
 
